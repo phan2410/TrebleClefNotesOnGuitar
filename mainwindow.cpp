@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
         currentNote = MusicNote::getRandomNote();
         currentNoteImage.loadFromData(*MusicNote::getImageDataOfTrebleClefNote(currentNote),NoteImageFormat);
         currentGuitarPositions = MusicNote::getGuitarPositionsOfNote(currentNote);
+        std::reverse(currentGuitarPositions.begin(), currentGuitarPositions.end());
         ui->labelMusicNote->setPixmap(currentNoteImage);
         ui->labelMusicNote->update();
         ui->labelScientificName->setText(currentNote);

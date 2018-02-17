@@ -8,6 +8,7 @@
 #include "musicnote.h"
 #include <QTimer>
 #include "anlogger.h"
+#include "algorithm"
 
 namespace Ui {
 class MainWindow;
