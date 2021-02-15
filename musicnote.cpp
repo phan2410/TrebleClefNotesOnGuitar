@@ -12,7 +12,9 @@ bool MusicNote::isNoteAvailable(const QString &NoteNotation)
 
 const QString MusicNote::getRandomNote()
 {
-    return TrebleClefNoteImageByNoteNotation.keys().at(qrand()%(TrebleClefNoteImageByNoteNotation.size()));
+    QString randomNote;
+    while ((randomNote = getNoteAtGuitarPosition(getRamdomGuitarPosition())).size() != 2);
+    return randomNote;
 }
 
 const QString MusicNote::getRamdomGuitarPosition()
