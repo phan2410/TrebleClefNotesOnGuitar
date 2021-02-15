@@ -5,6 +5,7 @@
 #include <QPixmap>
 #include <QBuffer>
 #include <QtMultimedia/QMediaPlayer>
+#include <QMediaContent>
 #include "musicnote.h"
 #include <QTimer>
 #include "anlogger.h"

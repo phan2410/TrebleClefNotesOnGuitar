@@ -50,6 +50,7 @@ void MainWindow::playSoundAtPendingGuitarPositionsAndContinue()
         currentNoteSound.close();
         currentNoteSound.setBuffer(MusicNote::getSoundDataAtGuitarPosition(currentGuitarPositions.takeFirst()));
         currentNoteSound.open(QIODevice::ReadOnly);
+        NoteSoundPlayer.setMedia(QMediaContent(),&currentNoteSound);
         NoteSoundPlayer.play();
     }
     else
